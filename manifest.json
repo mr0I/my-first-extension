@@ -5,14 +5,14 @@
     "manifest_version": 2,
     "background": {
         "scripts": [
-            "background.js"
+            "/src/background.js"
         ],
         "persistent": false
     },
     "content_scripts": [
         {
             "js": [
-                "content.js"
+                "/src/content.js"
             ],
             "matches": [
                 "https://*.sisoog.com/*"
@@ -23,13 +23,19 @@
             "run_at": "document_end"
         }
     ],
+    "browser_action": {
+        "default_icon": "src/assets/images/logo.png",
+        "default_title": "Opens MyExtension",
+        "default_popup": "/src/app.html"
+    },
     "icons": {
-        "16": "assets/images/logo.png",
-        "48": "assets/images/logo.png",
-        "128": "assets/images/logo.png"
+        "16": "src/assets/images/logo.png",
+        "48": "src/assets/images/logo.png",
+        "128": "src/assets/images/logo.png"
     },
     "permissions": [
         "bookmarks",
-        "tabs"
+        "tabs",
+        "storage"
     ]
 }
