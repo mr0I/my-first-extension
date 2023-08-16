@@ -1,0 +1,35 @@
+{
+    "name": "first-extension",
+    "version": "1.0.0",
+    "description": "descriptiondescriptiondescriptiondescriptiondescription",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://*.sisoog.com/*"
+            ],
+            "exclude_matches": [
+                "https://*.sisoog.com/category/*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "16": "assets/images/logo.png",
+        "48": "assets/images/logo.png",
+        "128": "assets/images/logo.png"
+    },
+    "permissions": [
+        "bookmarks",
+        "tabs"
+    ]
+}
