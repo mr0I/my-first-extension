@@ -10,6 +10,10 @@ chrome.bookmarks.onCreated.addListener(() => {
 
 chrome.action.onClicked.addListener((tab) => {
     console.log(tab);
+
+    chrome.tabs.executeScript({
+        code: 'document.body.style.backgroundColor="red"'
+    })
 });
 
 chrome.bookmarks.onMoved.addListener(() => {

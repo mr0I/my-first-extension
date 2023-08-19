@@ -20,6 +20,13 @@ window.onload = () => {
             if (result) {
                 activeDarkMode();
             }
+
+            // chrome.tabs.query({
+            //     active: true,
+            //     currentWindow: true
+            // }, (res) => {
+            //     console.log('tabs ', res);
+            // })
         })
     })();
 }
