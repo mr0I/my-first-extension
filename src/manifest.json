@@ -2,14 +2,10 @@
     "name": "__MSG_appName__",
     "version": "1.0.0",
     "description": "__MSG_appDesc__",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "default_locale": "en",
     "background": {
-        "scripts": [
-            "background.js",
-            "backgroundMessaging.js"
-        ],
-        "persistent": false
+        "service_worker": "background.js"
     },
     "content_scripts": [
         {
@@ -27,7 +23,7 @@
             "run_at": "document_end"
         }
     ],
-    "browser_action": {
+    "action": {
         "default_icon": "assets/images/logo.png",
         "default_title": "Opens MyExtension",
         "default_popup": "app.html"
@@ -40,7 +36,9 @@
     "permissions": [
         "bookmarks",
         "tabs",
-        "storage",
+        "storage"
+    ],
+    "host_permissions": [
         "https://api.github.com/"
     ]
 }
