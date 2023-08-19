@@ -6,17 +6,17 @@
     "default_locale": "en",
     "background": {
         "scripts": [
-            "/src/background.js",
-            "/src/backgroundMessaging.js"
+            "background.js",
+            "backgroundMessaging.js"
         ],
         "persistent": false
     },
     "content_scripts": [
         {
             "js": [
-                "/src/content.js",
-                "/src/contentMessaging.js",
-                "/src/contentRequests.js"
+                "content.js",
+                "contentMessaging.js",
+                "contentRequests.js"
             ],
             "matches": [
                 "https://*.sisoog.com/*"
@@ -28,14 +28,14 @@
         }
     ],
     "browser_action": {
-        "default_icon": "src/assets/images/logo.png",
+        "default_icon": "assets/images/logo.png",
         "default_title": "Opens MyExtension",
-        "default_popup": "/src/app.html"
+        "default_popup": "app.html"
     },
     "icons": {
-        "16": "src/assets/images/logo.png",
-        "48": "src/assets/images/logo.png",
-        "128": "src/assets/images/logo.png"
+        "16": "assets/images/logo.png",
+        "48": "assets/images/logo.png",
+        "128": "assets/images/logo.png"
     },
     "permissions": [
         "bookmarks",

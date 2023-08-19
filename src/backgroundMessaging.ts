@@ -5,7 +5,7 @@ chrome.bookmarks.onMoved.addListener(() => {
         chrome.tabs.sendMessage(
             tabs[0].id,
             { name: 'Ali' },
-            () => console.log('background_callback')
+            (res) => console.log('background_callback')
         );
     });
 });
@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener((req, sender, callback) => {
     // also should sanitize input
     console.log('req ', req);
     console.log('sender ', sender);
-    console.log('callback ', callback());
+    console.log('callback ', callback('hellooooooo'));
     console.log('errors ', chrome.runtime.lastError);
 })
 
