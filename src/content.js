@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.createElement('button');
-    button.innerText = 'Dark Mode';
+    button.innerText = chrome.i18n.getMessage('darkModeBtnText');
     button.id = 'darkmode_btn';
     button.addEventListener('click', () => activeDarkMode());
 

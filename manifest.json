@@ -1,8 +1,9 @@
 {
-    "name": "first-extension",
+    "name": "__MSG_appName__",
     "version": "1.0.0",
-    "description": "descriptiondescriptiondescriptiondescriptiondescription",
+    "description": "__MSG_appDesc__",
     "manifest_version": 2,
+    "default_locale": "en",
     "background": {
         "scripts": [
             "/src/background.js",
@@ -14,7 +15,8 @@
         {
             "js": [
                 "/src/content.js",
-                "/src/contentMessaging.js"
+                "/src/contentMessaging.js",
+                "/src/contentRequests.js"
             ],
             "matches": [
                 "https://*.sisoog.com/*"
@@ -38,6 +40,7 @@
     "permissions": [
         "bookmarks",
         "tabs",
-        "storage"
+        "storage",
+        "https://api.github.com/"
     ]
 }

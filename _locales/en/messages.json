@@ -1,0 +1,11 @@
+{
+    "appName": {
+        "message": "my first extension"
+    },
+    "appDesc": {
+        "message": "descriptiondescriptiondescriptiondescriptiondescription"
+    },
+    "darkModeBtnText": {
+        "message": "Dark Mode"
+    }
+}
