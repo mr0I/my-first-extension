@@ -36,3 +36,8 @@ chrome.runtime.onMessage.addListener((req, sender, callback) => {
     console.log('errors ', chrome.runtime.lastError);
 })
 
+chrome.tabs.onActivated.addListener(function (activeInfo) {
+    chrome.tabs.get(activeInfo.tabId, function (tab) {
+	   // **
+    });
+});
