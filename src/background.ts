@@ -41,3 +41,14 @@ chrome.tabs.onActivated.addListener(function (activeInfo) {
 	   // **
     });
 });
+
+function _clearLocalStorage() {
+    chrome.storage.local.clear(function () {
+        if (chrome.runtime.lastError) {
+            console.error('Storage not cleared! ', error);
+            return;
+        }
+        console.info('Storage cleared.');
+    });
+    return;
+}
